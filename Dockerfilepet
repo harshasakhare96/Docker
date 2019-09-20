@@ -1,0 +1,5 @@
+FROM tomcat:9.0-jre8
+COPY petclinic.war /usr/local/tomcat/webapps
+ENTRYPOINT ["catalina.sh","run"]
+
+
