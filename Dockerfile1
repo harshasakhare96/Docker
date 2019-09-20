@@ -1,0 +1,11 @@
+FROM tomcat:9.0.26-jdk8-openjdk
+
+MAINTAINER harsha
+WORKDIR /usr/local/tomcat/webapps
+
+RUN  wget -O jenkins.war http://ftp-nyc.osuosl.org/pub/jenkins/war/2.142/jenkins.war -P /usr/local/tomcat/webapps
+
+ENTRYPOINT ["catalina.sh","run"]
+
+
+
